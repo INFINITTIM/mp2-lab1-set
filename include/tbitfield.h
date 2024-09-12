@@ -12,7 +12,7 @@
 
 using namespace std;
 
-typedef unsigned int TELEM;
+typedef unsigned int TELEM; // изменили название существующего типа данных на telem (псевдоним)
 
 class TBitField
 {
