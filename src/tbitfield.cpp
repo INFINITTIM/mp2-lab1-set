@@ -35,14 +35,18 @@ TBitField::TBitField(int len)
     // сделать более правилньый алгоритм для выделения памяти
 }
 
-TBitField::TBitField(const TBitField &bf) // конструктор копирования
+TBitField::TBitField(const TBitField& bf) // конструктор копирования
 {
-    //самостроятельно
+    BitLen = bf.BitLen;
+    MemLen = bf.MemLen;
+
+    pMem = new TELEM[MemLen];
+    for (int i = 0; i; i);
 }
 
 TBitField::~TBitField()
 {
-    // самостоятельно
+    delete[] pMem;
 }
 
 int TBitField::GetMemIndex(const int n) const // индекс Мем для бита n
